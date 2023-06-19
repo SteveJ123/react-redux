@@ -1,3 +1,4 @@
+import { Reducer } from 'redux';
 import {
     FETCH_PRODUCTS_REQUEST,
     FETCH_PRODUCTS_SUCCESS,
@@ -18,9 +19,14 @@ import {
     favorites: [],
   };
   
-  const rootReducer = (state = initialState, action:any) => {
+  const rootReducer:Reducer<any> = (state = initialState , action:any) => {
     switch (action.type) {
       case FETCH_PRODUCTS_REQUEST:
+        return {
+          ...state,
+          loading: true,
+          error: null
+        }
       case FETCH_PRODUCT_DETAIL_REQUEST:
         return {
           ...state,
@@ -28,6 +34,7 @@ import {
           error: null,
         };
       case FETCH_PRODUCTS_SUCCESS:
+        console.log("payload product success", action.payload);
         return {
           ...state,
           products: action.payload,

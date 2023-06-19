@@ -50,17 +50,17 @@ export const addToFavorites = (product:any) => ({
   payload: product,
 });
 
-export const fetchProducts = () => {
+export const fetchProducts: any = () => {
     return (dispatch:any) => {
       dispatch(fetchProductsRequest());
       fetch('https://api.escuelajs.co/api/v1/products')
-        .then((response) => response.json())
+        .then((response) =>  response.json())
         .then((data) => dispatch(fetchProductsSuccess(data)))
         .catch((error) => dispatch(fetchProductsFailure(error.message)));
     };
   };
   
-  export const fetchProductDetail = (name:any) => {
+  export const fetchProductDetail: any = (name:any) => {
     return (dispatch:any) => {
       dispatch(fetchProductDetailRequest());
       fetch(`https://api.escuelajs.co/api/v1/products/${name}`)
