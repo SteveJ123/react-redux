@@ -1,1 +1,32 @@
+FRONT END PROJECT
+The front end project uses React with TypeScript and Redux. Completing all requirement, you will get 20 points. Good luck and HAVE FUN !!!
 
+How to run project
+Step 1: yarn
+Step 2: yarn start
+
+Logic Requirements (8 points)
+---getproducts Fetch data from this API: https://api.escuelajs.co/api/v1/products
+The user can search product by name
+--input field to search
+--getProductdetial Get the product detail by this API: https://api.escuelajs.co/api/v1/products/name
+When the user click to product image or a button it should show product detail
+The user can add product to Favorite page
+When the user add a product to Favorite the favorite icon should change the color.
+Have a Loading page while fetching data
+
+
+
+Deploy the project
+Styling Requirements (4 points)
+Font: font-family: 'Nunito', sans-serif
+Navbar and Footer
+When the user add an product to Favorite page, you should show a message, for example: A product(or product name) just added to the favorite page
+Code style Requirements (6 points)
+Naming convention
+Clear file structure
+Divided the project to small components
+Clean code: no console.log, no dead code,
+Format code (Prettier - Code formatter)
+Separate import from your own file and the import from the package
+Extra requirements (2 points)
